@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecrous Engine Documentation</title>
+  <link rel="stylesheet" href="doc.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#introduction">Введение</a></li>
+        <li><a href="#setup">Настройка</a></li>
+        <li><a href="#api">API</a></li>
+        <li><a href="#examples">Примеры</a></li>
+        <li><a href="#programming">Программирование</a></li>
+        <li><a href="#visual-programming">Визуальное программирование</a></li>
+        <li><a href="#support">Поддержка</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="content">
+    <header>
+      <h1>Ecrous Engine Documentation</h1>
+    </header>
+
+    <main>
+      <section id="introduction">
+        <h2>Введение</h2>
+        <p>
+Память обновлена
+Вот обновленное описание для Ecrous Engine:
+
+Ecrous Engine — это мощный игровой движок для создания 2D и 3D игр, а также приложений с поддержкой виртуальной (VR) и дополненной реальности (AR). Он предоставляет разработчикам все необходимые инструменты и документацию, начиная с первых шагов и заканчивая сложными примерами использования.<br>С Ecrous Engine вы можете создавать увлекательные игры для различных платформ, включая ПК, телефоны и планшеты, что обеспечивает широкий охват аудитории. Благодаря интуитивно понятному интерфейсу и богатой функциональности, вы сможете легко реализовать свои идеи и создать уникальные игровые проекты.</p>
+      </section>
+
+      <section id="setup">
+        <h2>Настройка</h2>
+        <p>Чтобы начать работу с Ecrous Engine, следуйте шагам по установке на вашем устройстве:</p>
+        <pre>
+1. Скачайте движок с официального сайта. <a href="https://humoatstudio.github.io/Ecrous-Studio/">Сайт</a>
+2. Установите необходимые зависимости.
+3. Запустите первый проект через интерфейс редактора.
+        </pre>
+      </section>
+
+      <section id="api">
+        <h2>API</h2>
+        <p>API Ecrous Engine предоставляет вам широкий функционал для разработки игр:</p>
+        <pre>
+class GameObject {
+    init();
+    update();
+    render();
+}
+        </pre>
+      </section>
+
+      <section id="examples">
+        <h2>Примеры</h2>
+        <p>Вот несколько примеров использования движка для создания различных объектов и механик в игре:</p>
+        <pre>
+// Создание персонажа
+let player = new GameObject();
+player.init();
+player.update();
+player.render();
+        </pre>
+      </section>
+
+      <section id="programming">
+        <h2>Программирование</h2>
+        <p>Ecrous Engine поддерживает множество языков программирования, таких как JavaScript, Lua и Python, для создания логики игры. Пример на JavaScript:</p>
+        <pre>
+// Обновление игровой сцены
+function update() {
+    player.move();
+    enemy.update();
+}
+        </pre>
+      </section>
+
+      <section id="visual-programming">
+        <h2>Визуальное программирование</h2>
+        <p>Для тех, кто предпочитает визуальное программирование, движок также предлагает интуитивно понятный редактор блоков:</p>
+        <div class="visual-editor">
+          <div class="block-area">
+            Перетащите блоки сюда
+          </div>
+        </div>
+      </section>
+
+      <section id="support">
+        <h2>Поддержка</h2>
+        <p>Если у вас возникли вопросы или проблемы, вы можете обратиться за поддержкой на официальном форуме или в сообществе пользователей движка.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="doc.js"></script>
+</body>
+</html>

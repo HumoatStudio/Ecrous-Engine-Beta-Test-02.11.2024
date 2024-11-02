@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build</title>
+    <link rel="stylesheet" href="build.css">
+    <link rel="icon" href="../../../sprites/app.png" type="image/png">
+</head>
+<body>
+    
+    <!-- Кнопка назад -->
+    <a href="../Editor.html" class="back-button">
+        <img src="../../../sprites/close.png" alt="Назад">    
+    </a>
+
+    <!-- Заголовок -->
+    <div class="title">
+        <h1>Сборка</h1>
+    </div>
+
+    <!-- Независимые объекты -->
+    <div class="button buildAPK">.APK</div>
+    <div class="button buildECR">.ECR</div>
+
+    <div class="button buildIPA" id="ipa-btn">
+        .IPA
+        <img src="Icons/star.png" alt="Премиум" class="star-icon">
+        <div class="tooltip" id="ipa-tooltip">Это премиум функция для сборки .IPA</div>
+    </div>
+
+    <div class="button buildEXE" id="exe-btn">
+        .EXE
+        <img src="Icons/star.png" alt="Премиум" class="star-icon">
+        <div class="tooltip" id="exe-tooltip">Это премиум функция для сборки .EXE</div>
+    </div>
+
+    <div class="button buildTV" id="tv-btn">
+        .TV
+        <img src="Icons/star.png" alt="Премиум" class="star-icon">
+        <div class="tooltip" id="tv-tooltip">Это премиум функция для сборки .TV</div>
+    </div>
+
+    <script src="build.js"></script>
+</body>
+</html>

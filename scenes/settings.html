@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки</title>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="icon" href="../sprites/app.png" type="image/png">
+</head>
+<body>
+    <!-- Кнопка назад -->
+    <a href="../index.html" class="back-button">
+        <img src="../sprites/close.png" alt="Назад">
+    </a>
+
+    <div class="title">Настройки</div>
+
+        <div class="settings-container">
+        <div class="setting">
+            <label for="file-path">Путь к файлам:</label>
+            <input type="text" id="file-path" placeholder="Введите путь к файлам">
+        </div>
+
+        <div class="setting">
+            <label for="gravity">Гравитация:</label>
+            <input type="number" id="gravity" value="9.81" step="0.1">
+        </div>
+
+        <div class="setting">
+            <label for="language">Язык:</label>
+            <select id="language">
+                <option value="ru" selected>Русский</option>
+                <option value="en">Английский</option>
+                <option value="uk">Украинский</option>
+                <option value="kz">Казахский</option>
+                <option value="by">Белорусский</option>
+                <option value="pl">Польский</option>
+                <option value="pt-br">Бразильский</option>
+                <option value="ko">Корейский</option>
+                <option value="zh">Китайский</option>
+                <option value="de">Немецкий</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../../../fonts/ofont.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-image: url('../../../../sprites/bg2.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    animation: fadeIn 1s ease-in-out forwards; /* Анимация для body */
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out forwards; /* Анимация для заголовка */
+}
+
+pre {
+    white-space: pre-wrap; 
+    background-color: #1c1c1c; 
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    animation: fadeIn 2s ease-in-out forwards; /* Анимация для pre */
+}
+
+.title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards; /* Анимация для заголовка */
+}
+
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    animation: fadeIn 2s ease-in-out forwards; /* Анимация для кнопки назад */
+}
+
+.back-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.console-output {
+    width: 70%;
+    height: 200px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    color: #00ff00;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 16px;
+    overflow-y: auto;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+    display: flex; /* Flexbox для центровки */
+    justify-content: center; /* Горизонтальная центровка */
+    align-items: center; /* Вертикальная центровка */
+    text-align: center; /* Центровка текста внутри pre */
+}
+
+.console-output pre {
+    margin: 0; /* Убираем стандартные отступы pre */
+    white-space: pre-wrap; /* Чтобы текст переносился */
+}
+
+.console-title {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 90px;
+    animation: fadeIn 2s ease-in-out forwards; /* Анимация для заголовка консоли */
+}
+
+.run-button {
+    width: 175px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../../../../sprites/run.png');
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    bottom: -20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out forwards; /* Анимация для кнопки запуска */
+}
+
+.run-button:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.code-editor {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border: none;
+    font-family: monospace;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    resize: none;
+    animation: fadeIn 2s ease-in-out forwards; /* Анимация для редактора кода */
+}
+
+.code-editor:focus {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+}
+
+.assistant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+    animation: fadeIn 2.5s ease-in-out forwards; /* Анимация для помощника */
+}
+
+.assistant:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Эффект смещения вниз */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

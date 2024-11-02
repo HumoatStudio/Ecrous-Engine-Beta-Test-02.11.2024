@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>NexLang IDE</title>
+    <link rel="stylesheet" href="NexLang.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.0/full/pyodide.js"></script>
+    <link rel="icon" href="../../../../sprites/app.png" type="image/png">
+</head>
+<body>
+    
+    <!-- Кнопка назад -->
+    <a href="../script.html" class="back-button">
+        <img src="../../../../sprites/close.png" alt="Назад">
+    </a>
+
+    <div class="title">NexLang IDE</div>
+
+    <!-- Текстовое поле для написания кода -->
+    <textarea id="codeEditor" class="code-editor" placeholder="Ваш код на NexLang"></textarea>
+    
+    <!-- Кнопка для запуска кода -->
+    <button id="runButton" class="run-button"></button>
+
+    <div id="console" class="console-output">
+        <pre id="consoleOutput">
+            Initial console message...
+            Welcome to NexLang IDE!
+        </pre>
+    </div>
+
+    <!-- Мини помощник -->
+    <div id="assistant" class="assistant">
+        🆘
+    </div>
+
+    <script src="NexLang.js"></script>
+</body>
+</html>

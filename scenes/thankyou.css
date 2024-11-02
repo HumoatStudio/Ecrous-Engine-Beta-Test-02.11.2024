@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111; /* Тёмный фон */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden; /* Чтобы скрыть элементы, выходящие за границы */
+}
+
+.container {
+    text-align: center;
+    background-color: #252b33; /* Темно-серый фон контейнера */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    z-index: 2; /* Чтобы контейнер был над фоновыми элементами */
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #ff0055; /* Ярко-розовый цвет заголовка */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p {
+    color: #00ff85; /* Ярко-зелёный цвет */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ff0055; /* Розовая рамка */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.thank-you-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thank-you-list li {
+    color: #fff;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    display: none;
+    transition: color 0.3s;
+}
+
+.thank-you-list li:hover {
+    color: #ff0055; /* Розовый при наведении */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ff0055;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e6004d;
+    transform: translateY(-3px);
+}
+
+/* Фоновые неоновые фигуры */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle, .triangle, .square {
+    position: absolute;
+    border: 4px solid #ff0055; /* Красная неоновая линия */
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.8), 0 0 50px rgba(255, 0, 85, 0.6);
+    opacity: 0.15; /* Чтобы фигуры не отвлекали внимание */
+    animation: pulse 5s infinite ease-in-out; /* Анимация пульсации */
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    left: 70%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 173.2px solid #ff0055; /* Треугольник */
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.8), 0 0 50px rgba(255, 0, 85, 0.6);
+}
+
+/* Анимация пульсации для фигур */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

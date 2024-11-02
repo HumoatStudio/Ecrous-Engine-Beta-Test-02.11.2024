@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визуальное программирование - Pocket Code</title>
+    <link rel="stylesheet" href="vsscript.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Блоки</h2>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="output('Привет, мир!')">🖨 Вывести 'Привет, мир!'</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="x = 5">🔢 Установить x на 5</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="output(x)">🖨 Вывести x</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="if (x > 0) { output('Положительное') }">❓ Если x > 0</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="for (let i = 0; i < 10; i++) { output('Повторить') }">🔁 Повторить 10 раз</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="setTimeout(() => { output('1 секунда прошла') }, 1000)">⏳ Подождать 1 секунду</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="setColor('red')">🎨 Установить цвет на красный</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="changeSize(10)">📏 Увеличить размер на 10</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="move(10)">➡️ Двигаться на 10 шагов</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="turn(15)">↩️ Повернуть на 15 градусов</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="if (touchingEdge) { bounce() }">🏁 Если касаюсь края</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="prompt('Как тебя зовут?')">👤 Спросить имя</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="score = 0">🏆 Установить счет на 0</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="score += 1">➕ Увеличить счет на 1</div>
+            <div class="block" draggable="true" ondragstart="drag(event)" data-code="resetScore()">🔄 Сбросить</div>
+        </div>
+        <div class="workspace" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Рабочая область</h2>
+            <div id="workspace"></div>
+            <button id="runButton">▶️ Запустить код</button>
+            <pre id="output"></pre>
+        </div>
+    </div>
+    <script src="vsscript.js"></script>
+</body>
+</html>

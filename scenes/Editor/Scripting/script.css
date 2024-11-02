@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../../fonts/ofont.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-image: url('../../../sprites/bg2.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+/* Анимации для заголовков и кнопок */
+.title, .plus-button, .import-button, .back-button {
+    transition: opacity 0.3s ease;
+}
+
+.title {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    animation: fadeInTitle 2s ease-in-out forwards;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для кнопок */
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Общие стили для кнопки назад */
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px; /* Увеличил размер для лучшего восприятия */
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    border: none; /* Убрал рамку */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Тень для объёмности */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.back-button img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* Анимация увеличения изображения */
+}
+
+.back-button:hover {
+    transform: scale(1.1); /* Лёгкое увеличение кнопки */
+    background-color: rgba(255, 255, 255, 1); /* Более яркий белый цвет при наведении */
+}
+
+.back-button:hover img {
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+}
+
+/* Анимация плавного появления кнопки */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.plus-button {
+    position: absolute;
+    bottom: 15px;
+    left: 12%;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeInButton 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.import-button {
+    position: absolute;
+    bottom: 15px;
+    left: 55%;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeInButton 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.project-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 100px);
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.project-button {
+    width: 275px;
+    height: 60px;
+    background: linear-gradient(45deg, #6a0dad, #8a2be2);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-button:hover {
+    transform: scale(1.05);
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+}
+
+.project-menu {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 30;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-option {
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu-option:hover {
+    background-color: #f0f0f0;
+}
